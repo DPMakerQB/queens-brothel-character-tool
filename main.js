@@ -20,7 +20,7 @@ if (!fs.existsSync(outputFolderPath)) fs.mkdirSync(outputFolderPath)
 
 async function handleFileOpen() {
     const {canceled, filePaths} = await dialog.showOpenDialog({
-        properties: ["multiSelections"],
+        properties: ["multiSelections", "openFile"],
         "filters": [{"name": "PSD Files (.psd)", "extensions": ["psd"]}]
     })
     if (canceled) {
