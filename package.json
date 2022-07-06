@@ -7,7 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "electron-forge start",
     "package": "electron-forge package",
-    "make": "electron-forge make"
+    "make": "electron-forge make",
+    "make-windows": "electron-forge make --platform win32 --targets @electron-forge/maker-zip",
+    "make-mac": "electron-forge make --platform darwin --targets @electron-forge/maker-dmg",
+    "make-linux": "electron-forge make --platform linux --targets @electron-forge/maker-zip"
   },
   "repository": {
     "type": "git",
@@ -36,13 +39,6 @@
       "makers": [
         {
           "name": "@electron-forge/maker-zip"
-        },
-        {
-          "name": "@electron-forge/maker-deb",
-          "config": {}
-        },
-        {
-          "name": "@electron-forge/maker-dmg"
         }
       ]
     }
