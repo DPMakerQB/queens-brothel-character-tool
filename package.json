@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/DPMakerQB/queens-brothel-character-tool#readme",
   "dependencies": {
+    "jimp": "^0.16.1",
     "psd": "^3.4.0"
   },
   "devDependencies": {

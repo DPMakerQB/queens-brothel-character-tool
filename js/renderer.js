@@ -1,16 +1,24 @@
-const main = document.getElementById('main')
 const btn = document.getElementById('openFileBtn')
-const filePathElement = document.getElementById('filePath')
-const previewContainer = document.getElementById('previewContainer')
+const spinner = document.getElementById('spinner')
+const logs = document.getElementById('logs')
 
-btn.addEventListener('click', async () => {
-    const result = await window.electronAPI.openFile()
-    if (result) {
-        filePathElement.innerText = result.location
-        previewContainer.appendChild(result.preview)
-    }
+// Collect logs from main.js
+window.electronAPI.log((_event, value) => {
+    logs.value += "\n" + value
+    logs.scrollTop = logs.scrollHeight
 })
 
-main.addEventListener('drop', async (ev) => {
-    console.log(ev)
+// On upload button click
+btn.addEventListener('click', async () => {
+    spinner.classList.remove("invisible")
+    btn.classList.add("invisible")
+
+    const result = await window.electronAPI.openFile()
+
+    spinner.classList.add("invisible")
+    btn.classList.remove("invisible")
+
+    if (result) {
+        alert("Done!")
+    }
 })
