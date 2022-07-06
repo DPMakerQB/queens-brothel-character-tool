@@ -1,5 +1,5 @@
 {
-  "name": "queens-brothel-character-tool",
+  "name": "qb-character-tool",
   "version": "1.0.0",
   "description": "Exports character layers from PSD files, for Queen's Brothel.",
   "main": "main.js",
