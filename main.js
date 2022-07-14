@@ -135,7 +135,7 @@ async function handleFileOpen() {
                                                 image.composite(faceImage, 0, 0)
                                                 image.composite(hairBangsImage, 0, 0)
                                                 image.composite(outfitImage, 0, 0)
-                                                image.write(path.join(previewFolderPath, characterID + "-Clothes-" + outfitID + "-Preview.png"))
+                                                image.write(path.join(previewFolderPath, characterID + "-" + outfitID + "-Preview.png"))
 
                                                 resolve()
                                             })
