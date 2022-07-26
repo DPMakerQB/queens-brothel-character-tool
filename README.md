@@ -6,8 +6,9 @@ Exports character layers from PSD files, for Queen's Brothel.
 
 1. Download the [latest release](https://github.com/DPMakerQB/queens-brothel-character-tool/releases)
 2. Open tool
-3. Select one or multiple .psd files
-4. Output folder will automatically open once complete
+3. Select a .psd file
+4. Export All or one outfit
+5. Open output folder
 
 ## Compiling
 
