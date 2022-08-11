@@ -171,6 +171,7 @@ async function build(_event, fp, chosenOutfitID) {
                                         image.composite(faceImage, 0, 0)
                                         image.composite(hairBangsImage, 0, 0)
                                         image.composite(outfitImage, 0, 0)
+                                        image.resize(300, 324)
                                         image.write(path.join(previewFolderPath, characterID + "-" + outfitID + "-Preview.png"))
 
                                         resolve()
